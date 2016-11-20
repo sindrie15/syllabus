@@ -14,6 +14,7 @@
 
 #### Lab
 * Docker
+
 #### Reading material
 * Chapter 1
 
