@@ -32,7 +32,7 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 * The Problem of Delivering Software
 
 #### Lab
-* Docker
+* [Day 1 - Docker](./days/day1.md)
 
 #### Reading material
 * Chapter 1
@@ -43,7 +43,7 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 * Advanced Version Control
 
 #### Lab
-* TicTacToe
+* Get starting with development stack.
 
 #### Reading material
 * Chapter 2, 14
@@ -55,6 +55,7 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 * The Commit Stage
 
 #### Lab
+*
 * Create Test Environment
 * Write a deployment script
 
