@@ -24,7 +24,7 @@ Follow the tutorial here:
 https://docs.docker.com/engine/tutorials/dockerizing/
 
 When done with the tutorial, publish your hello world docker image to dockerhub:
-* run
+* Further information on how to tag and push docker images are [here](https://docs.docker.com/engine/getstarted/step_six/)   
 ```
 docker login
 docker push <yourname>/helloworld"
