@@ -30,7 +30,7 @@ When done with the tutorial, publish your hello world docker image to dockerhub:
 * run
 ```
 docker login
-docker push <yourname>/helloworld"
+docker push <yourname>/helloworld
 ```
 
 Now you have your image published on dockerhub.
