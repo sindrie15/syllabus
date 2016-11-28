@@ -43,7 +43,7 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 * Advanced Version Control
 
 #### Lab
-* Get starting with development stack.
+* [Day 2 - Getting started](./days/day2.md)
 
 #### Reading material
 * Chapter 2, 14
@@ -56,8 +56,7 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 
 #### Lab
 *
-* Create Test Environment
-* Write a deployment script
+* Create Test & Production Environment
 
 #### Reading material
 * Chapter 4,5 and 7
