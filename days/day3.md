@@ -2,7 +2,7 @@
 
 ## Objectives
 
-* To be able to run application in an EC2 instance or Digital Ocean hosted linux machine.
+* To be able to run application in an AWS EC2 instance.
 
 ## Steps
 
@@ -17,8 +17,7 @@ Set up your AWS account. Follow instructions here:
 
 [Get set up for AWS ECS](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/get-set-up-for-amazon-ecs.html)
 
-Install amazon aws command line. Instructions here:
-[aws cli](https://aws.amazon.com/cli/?sc_channel=PS&sc_campaign=acquisition_ND&sc_publisher=google&sc_medium=command_line_b&sc_content=aws_cli_bmm&sc_detail=%2Baws%20%2Bcli&sc_category=command_line&sc_segment=161194456241&sc_matchtype=b&sc_country=ND&s_kwcid=AL!4422!3!161194456241!b!!g!!%2Baws%20%2Bcli&ef_id=VZ6aFgAABJZt52AR:20161129143605:s)
+You can skip the last optional step but instead you need to install the [AWS Comman Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 
 Login to aws. You must have your AWS credentials first.
 
