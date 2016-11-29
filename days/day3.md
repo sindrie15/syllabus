@@ -48,7 +48,8 @@ At this point you should have the chat application running on an EC2 instance.
 
 Apart from login and ssh keys generation, all the steps above are scriptable.
 Create a script (bash, make, powershell), which allows you to provision a new
-server automatically. AWS CLI allows you
+server automatically. One of the things aws ec2 commands allow, are to specify
+a script that is run on the newly provisioned server.
 
 Create a folder named "provisioning" in the project and store this script there.
 
