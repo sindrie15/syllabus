@@ -6,7 +6,7 @@ A Bash script is a plain text file which contains a series of commands. These co
 
 **Anything you can run normally on the command line can be put into a script and it will do exactly the same thing. Similarly, anything you can put into a script can also be run normally on the command line and it will do exactly the same thing.**
 
-#### What do the look like
+#### What do they look like
 A most basic bash-script **myscript.sh**
 ```
 #!/bin/bash
