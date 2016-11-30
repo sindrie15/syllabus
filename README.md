@@ -56,7 +56,8 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 
 #### Lab
 *
-* Create Test & Production Environment
+* [Day 3 - Provision Test & Production Environment](./days/day3.md)
+*
 
 #### Reading material
 * Chapter 4,5 and 7
@@ -64,13 +65,12 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 ### Day 4
 #### Lecture
 * Build and Deployment Scripting
-* Managing Components and Dependencies
+
 #### Lab
-* Continuous Integration
-* Implement first two stories on backlog
+* See days 1-3
 
 #### Reading material
-* Chapter 6 and 13
+* Chapter
 
 ### Day 5
 #### Lecture
