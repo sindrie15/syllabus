@@ -116,5 +116,9 @@ Code from Andri's lecture where he shows usage of docker compose is found here:
 
 https://github.com/KolibriDev/intro-docker
 
+Further networking information for docker compose can be found here:
+
+https://docs.docker.com/compose/networking/
+
 Use this as as reference as to how to do the composing. You will need to modify code in order to use environment
 variables to control the postgres connection string.
