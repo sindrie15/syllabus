@@ -78,3 +78,4 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 
 #### Lab
 * Open Lab
+* [Day 5 - Week one wrap-up](./days/day5.md)
