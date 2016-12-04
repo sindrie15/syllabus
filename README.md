@@ -83,68 +83,44 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 ## Week 2
 ### Day 6: Mon. 5th of December
 #### Lecture
-* commit stage
-* jenkins
+* Commit Stage
+* Jenkins
 
 #### Lab
-https://github.com/stefaneg/hgop2015/blob/master/hgop-docs/day3.md
-
-Continuous Integration - Jenkins
-
-Set up Jenkins image (https://hub.docker.com/_/jenkins/)
-Deploy Jenkins to server
-Create two projects
-Commit stage (fails on tests)
-Deploy latest Implement first two stories on backlog
-
-PLUS:
-Get a test report displayed in Jenkins for tests run in Karma. Using Karma JUnit Reporter should do the trick.
-
-* [Day x - yy](./days/dayx.md)
+* [Day 6 - Commit Stage - Jenkins](./days/day6.md)
 
 #### Reading material
 * Chapter 3,7
 
 ### Day 7
 #### Lecture
-* Simple Event Sourcing (gse)
-* TDD Demo (gse)
+* Simple Event Sourcing
+* TDD Demo
 
 #### Lab
-Start preparing for implementing unit tests for a tic-tac-toe server by collecting examples using an event based approach
-https://github.com/stefaneg/hgop2015/blob/master/hgop-docs/day4.md
+Start preparing for implementing unit tests for a tic-tac-toe server by collecting examples using an event based approach.
 
-use a strict TDD approach to implement server logic (see TTD circle from Implementing a testing strategy lecture)
-https://github.com/stefaneg/hgop2015/blob/master/hgop-docs/day5.md
-* [Day x - yy](./days/dayx.md)
+Use a strict TDD approach to implement server logic.
 
 #### Reading material
 * Chapter 8
 
 ### Day 8
 #### Lecture
-* Automated Acceptance Testing (hp)
+* Automated Acceptance Testing
 
 #### Lab
-get the server into a state to accept create game commands.
-https://github.com/stefaneg/hgop2015/blob/master/hgop-docs/day6.md
-https://github.com/stefaneg/hgop2015/blob/master/hgop-docs/day7.md
-https://github.com/stefaneg/hgop2015/blob/master/hgop-docs/day8.md
-
-* [Day x - yy](./days/dayx.md)
+Get the server into a state to accept create game commands. Implement automatic acceptance tests.
 
 #### Reading material
 * Chapter 8
 
 ### Day 9
 #### Lecture
-* Sjá
-
+* Guest lecture: Jóhanna Símonardóttir from Sjá introduces user and usability testing.
 
 #### Lab
-* Ekkert nýtt, kansnki user testing eða áframhaldandi forritun
-
-#### Reading material
+* To be decided
 
 ### Day 10
 #### Lecture
