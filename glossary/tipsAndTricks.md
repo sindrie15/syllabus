@@ -49,3 +49,33 @@ exit 0
 
 I.e. use this script as CMD in your Dockerfile instead of ``node run.js``.
 NOTE: this is not a great fix so you are encouraged to improve upon it, and remember to comment the script even if you don't change it.
+
+### GIT Tag
+The script given as an example for Day 2 has functionality creates a Git tag variable called GIT_COMMIT. I.e. the Git tag for your latest Git commit is exported to the GIT_COMMIT variable in the bash script.
+```
+if [ -z "$GIT_COMMIT" ]; then
+  export GIT_COMMIT=$(git rev-parse HEAD)
+  export GIT_URL=$(git config --get remote.origin.url)
+fi
+```
+While the script is running the environment has access to this variable but after the script has finished it is no longer accessible.
+
+This Tag is used to Tag the Docker images you build.
+```
+docker build -t STUDENTNAME/tictactoe:$GIT_COMMIT .
+```
+So when ``docker-compose`` wants to run your image it needs access to this variable. As described [here](https://docs.docker.com/compose/env-file/) Docker Compose has access to all environment variables that are stored in a file called ``.env``.
+Within the file the variable can be used with the notation ``${VARIABLE_NAME}``.
+
+So for your Docker Compose file to be able to access your GIT_COMMIT tag you need to:   
+1. Add to your script commands that create a file called ```.env```   
+2. Make your script add the variable to the file  ```GIT_COMMIT=$GIT_COMMIT```
+Hint: Your code already creates a text file and places your Git tag into it:   
+```
+cat > ./dist/githash.txt <<_EOF_
+$GIT_COMMIT
+_EOF_
+```
+3. Make your Docker Compose file use the variable ``${GIT_COMMIT}`` when getting your Docker Image.
+
+For those who have removed the Git commit tag from the script when building docker or have written their own scripts, remember to add the tag at the end of your image name, ```STUDENTNAME/tictactoe:$GIT_COMMIT```.
