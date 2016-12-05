@@ -11,22 +11,25 @@ Optionally you can upload you ssh-key for authorization.
 2. This instance does not have Docker preinstalled so you need to set up Docker. We recommend you follow this [tutorial](https://docs.docker.com/engine/installation/linux/ubuntulinux/) to the subheader "Adjust memory and swap accounting"
 
 **Install Jenkins**
-1. Get the this [Docker Container] (https://hub.docker.com/r/library/jenkins/) on Ubuntu machine and run.
-Tips:
-    * You need to create a folder for the jenkins data on the host and give the jenkins user access to that folder.
-    * The jenkins user has the uid 1000
-    * Use the command chown to change ownership of a folder.
-    * Port 32700-32800 are open in the Advania firewall
-    * User --detach or -d to run docker in detached mode.
-    * Recommended to assign name to the docker container using the --name flag.
-2. If everything is configured correctly you should get the installation wizard from Jenkin by typing in your machines ip address and chosen port:
-[ip address]:[port]
+1. Install Jenkins following this [tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
+
+2. If everything is configured correctly you should get the installation wizard from Jenkins by typing in your machines ip address and chosen port:
+[ip address]:[8080]
 3. Follow the Jenkins wizard. You should install suggested plugins.
-4. We recommend that you install the Green Balls plugin.
+4. We recommend that you start by installing the Green Balls plugin.
 
 **Create Commit Stage project**
 1. Create Jenkins Project that gets the latest version of from git and runs the build script.
-2. Add post build step that published the unit test results.
+2. Later we will add a post build step that published the unit test results.
+Hint:
+    * You need to install NodeJs and Npm
+      https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+    * User node -v and npm -v to check version
+    * Install git
+    * You also need to install Docker
+    * docker login on jenkins account
+    * Restart Jenkins after installation sudo service jenkins restart
+    * If you are using private git repository you need to add deploy key to github. (Test the key using: ssh -T git@github.com)
 
 **Create Deployment project**
 1. Create new project that deploys to AWS.
