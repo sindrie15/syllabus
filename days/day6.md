@@ -5,28 +5,26 @@ Setup Jenkins Continuous Integration Server and implement the following stories:
 * Can update latest version in production by push of a button
 
 ## Steps
-**Setup Ubuntu**
+**Setup Ubuntu**  
 1. We have created a Ubuntu instance in the Advania Cloud, pick a instance by adding your name and email to the following [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1ubEZNa1ehYiifsu0hfZSLcSxEythk_5Xr03iH0qaOxI/edit?usp=sharing).  
 Optionally you can upload you ssh-key for authorization.
-2. This instance does not have Docker preinstalled so you need to set up Docker. We recommend you follow this [tutorial](https://docs.docker.com/engine/installation/linux/ubuntulinux/) to the subheader "Adjust memory and swap accounting"
 
 **Install Jenkins**
-1. Install Jenkins following this [tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
+  1. Install Jenkins following this [tutorial](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
 
-2. If everything is configured correctly you should get the installation wizard from Jenkins by typing in your machines ip address and chosen port:
-[ip address]:[8080]
-3. Follow the Jenkins wizard. You should install suggested plugins.
-4. We recommend that you start by installing the Green Balls plugin.
+  2. If everything is configured correctly you should get the installation wizard from Jenkins by typing in your machines ip address and chosen port: [ip address]:[8080]
+  3. Follow the Jenkins wizard. You should install suggested plugins.
+  4. We recommend that you start by installing the Green Balls plugin.
 
 **Create Commit Stage project**
 1. Create Jenkins Project that gets the latest version of from git and runs the build script.
-2. Later we will add a post build step that published the unit test results.
-Hint:
+2. Later we will add a post build step that published the unit test results.  
+Hint:  
     * You need to install NodeJs and Npm
       https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
     * User node -v and npm -v to check version
     * Install git
-    * You also need to install Docker
+    * You also need to install Docker We recommend you follow this [tutorial](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
     * docker login on jenkins account
     * Restart Jenkins after installation sudo service jenkins restart
     * If you are using private git repository you need to add deploy key to github. (Test the key using: ssh -T git@github.com)
