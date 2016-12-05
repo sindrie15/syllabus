@@ -108,6 +108,7 @@ Use a strict TDD approach to implement server logic.
 ### Day 8
 #### Lecture
 * Automated Acceptance Testing
+* Guest lecture: Jakob from Tempo on testing. 
 
 #### Lab
 Get the server into a state to accept create game commands. Implement automatic acceptance tests.
