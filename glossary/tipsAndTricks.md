@@ -69,7 +69,7 @@ Within the file the variable can be used with the notation ``${VARIABLE_NAME}``.
 
 So for your Docker Compose file to be able to access your GIT_COMMIT tag you need to:   
 1. Add to your script commands that create a file called ```.env```   
-2. Make your script add to the file the variable ```GIT_COMMIT=$GIT_COMMIT```
+2. Make your script add the variable to the file  ```GIT_COMMIT=$GIT_COMMIT```
 Hint: Your code already creates a text file and places your Git tag into it:   
 ```
 cat > ./dist/githash.txt <<_EOF_
