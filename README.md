@@ -98,9 +98,7 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 * TDD Demo
 
 #### Lab
-Start preparing for implementing unit tests for a tic-tac-toe server by collecting examples using an event based approach.
-
-Use a strict TDD approach to implement server logic.
+* [Day 7 - Gather given/when/then examples](./days/day7.md)
 
 #### Reading material
 * Chapter 8
@@ -111,6 +109,7 @@ Use a strict TDD approach to implement server logic.
 * Guest lecture: Jakob from Tempo on testing. 
 
 #### Lab
+Use a strict TDD approach to implement server logic.
 Get the server into a state to accept create game commands. Implement automatic acceptance tests.
 
 #### Reading material
