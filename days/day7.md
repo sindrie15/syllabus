@@ -28,6 +28,8 @@ You can use the following procedure.
 
  https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/
 
+Note: There is a missing column in the database (aggregate_id). You will have to fix this by adding a database migration.  See here: 
+https://db-migrate.readthedocs.io/en/latest/API/SQL/#addcolumntablename-columnname-columnspec-callback
 
 ## State (when are you done)
 
