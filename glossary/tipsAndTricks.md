@@ -79,3 +79,70 @@ _EOF_
 3. Make your Docker Compose file use the variable ``${GIT_COMMIT}`` when getting your Docker Image.
 
 For those who have removed the Git commit tag from the script when building docker or have written their own scripts, remember to add the tag at the end of your image name, ```STUDENTNAME/tictactoe:$GIT_COMMIT```.
+
+
+### AWS
+
+You should not interact at all with Github from your AWS instance. You will need to copy all necessary files
+from your project. For instance, copy docker-compose files using scp.
+
+```
+scp -o StrictHostKeyChecking=no -i "./ec2_instance/${SECURITY_GROUP_NAME}.pem" ./docker-compose.yaml ec2-user@${INSTANCE_PUBLIC_NAME}:~/docker-compose.yaml
+scp -o StrictHostKeyChecking=no -i "./ec2_instance/${SECURITY_GROUP_NAME}.pem" ./docker-compose-and-run.sh ec2-user@${INSTANCE_PUBLIC_NAME}:~/docker-compose-and-run.sh
+```
+
+
+Create instance command line looks like this:
+
+```
+INSTANCE_ID=$(aws ec2 run-instances  --user-data file://ec2-instance-init.sh --image-id ami-9398d3e0 --security-group-ids ${SECURITY_GROUP_ID} --count 1 --instance-type t2.micro --key-name ${SECURITY_GROUP_NAME} --query 'Instances[0].InstanceId'  --output=text)
+echo ${INSTANCE_ID} > ./ec2_instance/instance-id.txt
+```
+
+ec2-instance-init.sh is a script that AWS run on the newly started instance. Use this script to initialize
+the instance (ec2-instance-init.sh):
+
+You can ask with aws whether an instance has been created:
+
+```
+aws ec2 wait --region eu-west-1 instance-running --instance-ids ${INSTANCE_ID}
+```
+It will not necessarily be accessible through ssh right away.
+
+
+
+```
+sudo yum -y update
+sudo yum -y install docker
+sudo pip install docker-compose
+sudo pip install backports.ssl_match_hostname --upgrade
+
+sudo service docker start
+sudo usermod -a -G docker ec2-user
+
+touch ec2-init-done.markerfile
+```
+
+In order to halt script execution until the instance is available, use a loop like this:
+
+
+```
+status='unknown'
+while [ ! "${status}" == "ok" ]
+do
+   echo Checking status of host, currently ${status}
+   status=$(ssh -i "./ec2_instance/${SECURITY_GROUP_NAME}.pem"  -o StrictHostKeyChecking=no -o BatchMode=yes -o ConnectTimeout=5 ec2-user@${INSTANCE_PUBLIC_NAME} echo ok 2>&1)
+   sleep 2
+done
+```
+
+Note that this does not check if all installation is complete (docker, docker compose etc). You will
+need more checks in order to check that (hint: ec2-init-done.markerfile is part of the solution).
+
+
+In order to run a script remotely on the instance, use a command like this:
+
+```
+ssh -o StrictHostKeyChecking=no -i "./ec2_instance/${SECURITY_GROUP_NAME}.pem" ec2-user@${INSTANCE_PUBLIC_NAME} "cat ~/docker-compose-and-run.sh"
+```
+
