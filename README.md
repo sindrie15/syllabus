@@ -98,6 +98,8 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 * TDD Demo
 
 #### Lab
+Use a strict TDD approach to implement server logic.
+
 * [Day 7 - Gather given/when/then examples](./days/day7.md)
 
 #### Reading material
@@ -106,11 +108,10 @@ Að öllu óbreyttu verður prófið haldið síðasta dag námskeiðsins, þ.e.
 ### Day 8
 #### Lecture
 * Automated Acceptance Testing
-* Guest lecture: Jakob from Tempo on testing. 
+* Guest lecture: Jakob from Tempo on testing.
 
 #### Lab
-Use a strict TDD approach to implement server logic.
-Get the server into a state to accept create game commands. Implement automatic acceptance tests.
+* [Day 7 - Add test reports to Jenkins](./days/day8.md)
 
 #### Reading material
 * Chapter 8
@@ -118,9 +119,10 @@ Get the server into a state to accept create game commands. Implement automatic 
 ### Day 9
 #### Lecture
 * Guest lecture: Jóhanna Símonardóttir from Sjá introduces user and usability testing.
+* Acceptance test demo
 
 #### Lab
-* To be decided
+* Implement Automated Acceptance Tests
 
 ### Day 10
 #### Lecture
